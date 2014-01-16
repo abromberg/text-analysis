@@ -23,14 +23,14 @@ def build_db(db_name = "test.db"):
     conn.commit()
     conn.close()
 
-def insert_single(db_name, table, values):
+def insert_single(table, values, db_name = "test.db"):
     """ Adds a single entry to the database.
     
     Arguments:
-    - `db_name`: The name of the database.
     - `table`: The table you want to add to.
     - `values`: A list of values to be added, e.g.:
                 ["Andy", "Bromberg"]
+    - `db_name`: The name of the database.
     """
     conn = sqlite3.connect(db_name)
     values.insert(0, None) # adds NULL val to list so primary key increments
@@ -40,7 +40,24 @@ def insert_single(db_name, table, values):
     conn.commit()
     conn.close()
 
+def get_table_contents(table, db_name = "test.db"):
+    """ Returns the entire contents of a table in a list of lists, with 
+        individual lists representing the rows.
+    
+    Arguments:
+    - `table`: The table to be queried.
+    - `db_name`: The name of the database.
+    """
+    conn = sqlite3.connect(db_name)
+    get_contents_cmd = "SELECT * FROM " + table
+    contents = [row for row in conn.execute(get_contents_cmd)]
+    conn.close()
+    return contents
+    
+
 if __name__ == '__main__':
-    #build_db()
-    #insert_single('test.db', 'author', ['Andy', 'Bromberg'])
+    # build_db()
+    # insert_single('author', ['Andy', 'Bromberg'])
+    # insert_single('author', ['Jackson', 'Poulos'])
+    # print get_table_contents('author')
     pass
