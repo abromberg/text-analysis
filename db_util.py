@@ -43,4 +43,4 @@ def insert_single(db_name, table, values):
 if __name__ == '__main__':
     #build_db()
     #insert_single('test.db', 'author', ['Andy', 'Bromberg'])
-    
+    pass
