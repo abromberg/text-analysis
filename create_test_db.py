@@ -6,8 +6,6 @@ Creates a test database with a couple articles in it.
 
 import db_util
 
-
-
 if __name__ == '__main__':
     db_util.build_db('test.db')
     db_util.insert_single('author', ['John', 'Broder'])
@@ -160,6 +158,3 @@ Neither I nor the Model S ever visited “downtown Manhattan.”
 Mr. Musk not only apologized, he said the charging stations should be 60 miles closer together and offered me a second test drive when additional stations were built.
 """
     db_util.insert_single('article', [u'That Tesla Data: What It Says and What It Doesn’t', body_2, 1])
-    print db_util.get_table_contents('article')
-    print "*****************"
-    print db_util.get_table_contents('author')
