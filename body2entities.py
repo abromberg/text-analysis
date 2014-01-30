@@ -27,3 +27,7 @@ def body2entities(body):
         if (entity["_type"] == "IndustryTerm"):
             terms.append(entity["name"])
     return names, companies, orgs, terms
+
+
+if __name__ == '__main__':
+    pass
