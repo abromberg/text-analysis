@@ -11,3 +11,6 @@ def createTermSentences(desiredTerm, text):
 	sentences = tokenizer.tokenize(text)
 	termSentences = [sentence for sentence in sentences if desiredTerm in sentence]
         return termSentences
+
+if __name__ == '__main__':
+    pass
