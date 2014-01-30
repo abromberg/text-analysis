@@ -27,3 +27,6 @@ def createTermSentences(desiredTerm, path):
 	termSentences = [sentence for sentence in sentences if keyTerm in sentence]
 
 	print termSentences
+
+if __name__ == '__main__':
+    pass
