@@ -26,7 +26,7 @@ def createTermSentences(desiredTerm, path):
 	"""Creates array of sentences containing keyTerm"""
 	termSentences = [sentence for sentence in sentences if keyTerm in sentence]
 
-	print termSentences
+	return termSentences
 
 if __name__ == '__main__':
     pass
