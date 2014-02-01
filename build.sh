@@ -2,7 +2,7 @@
 
 ##################################################
 # Usage: ./build.sh [-f] test/clean              #
-#        -f will silently force following action #
+#        -f will silently force desired action   #
 ##################################################
 
 case "$1" in 
